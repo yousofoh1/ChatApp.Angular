@@ -5,11 +5,15 @@ import { RouterLink } from '@angular/router';
   imports: [RouterLink],
   styleUrls: ['style.scss'],
   template: `
-    <div class="chatapp-wrapper">
+    <div
+      class="chatapp-wrapper"
+      #chatapp
+    >
       <div class="wave"></div>
-      <a target="_blank" routerLink="https://github.com/yousofo">
+      <a target="_blank" href="https://github.com/yousofo">
         <svg
-          style="width: 100%;"
+          width="24"
+          height="24"
           viewBox="0 -3.5 256 256"
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="xMinYMin meet"
@@ -24,10 +28,13 @@ import { RouterLink } from '@angular/router';
             />
           </g>
         </svg>
-        <p>Github</p>
+        <p class="shift">Github</p>
       </a>
+      <p style="white-space: nowrap;" class="shift">
+        built by
+        <a style="display: inline;" href="https://github.com/yousofo">Yousofo</a>
+      </p>
     </div>
   `,
 })
-export class ChatappAngular {
-}
+export class ChatappAngular {}
